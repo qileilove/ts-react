@@ -1,12 +1,9 @@
 import * as React from 'react';
-import { Header, About } from './components';
+import { Header } from './components';
 
-export class  App extends React.Component<{}>  {
+export class  App extends React.Component<{props:any}>  {
     public render(){
   return (
-    <div className="container-fluid">
       <Header />
-      <About />
-    </div>
   );
 }}
