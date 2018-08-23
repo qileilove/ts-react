@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route, HashRouter, Switch } from 'react-router-dom';
 import { App } from './app';
-import { About, MembersPage } from './components';
+import { About, MembersPage, StudyPage } from './components';
 
 export class AppRouter extends React.Component<{}>  {
    public render() {return (
@@ -12,6 +12,7 @@ export class AppRouter extends React.Component<{}>  {
           <Route exact path="/" component={About} />
           <Route path="/about" component={About} />
           <Route path="/members" component={MembersPage} />
+          <Route path="/study" component={StudyPage} />
         </Switch>
       </div>
     </HashRouter>
