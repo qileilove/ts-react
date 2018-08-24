@@ -1,8 +1,15 @@
 import * as React from 'react';
 import '../css/site.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink,Prompt } from 'react-router-dom';
 export class Header extends React.Component<{}>{
+  
+      
     public render(){
+        const activeStyle = {
+            fontWeight: 'bold',
+            color: 'red',
+            backgroundColor: "silver"
+          };
     return (
         <div className="row col-12">
        <nav className="navbar navbar-expand-lg navbar-light bg-white" id="navbar">
@@ -22,9 +29,12 @@ export class Header extends React.Component<{}>{
               <Link className="nav-link" to="/members"> Members </Link>
             </li>
             <li className="nav-item ">
-              <Link className="nav-link" to="/study"> Study </Link>
+              <NavLink className="nav-link" style={activeStyle} to="/study"> Study </NavLink>
             </li>
+
           </ul>
+          <Prompt message="你确定要离开当前页面吗？" />
+
         </div>
       </nav>
     </div>)}
